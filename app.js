@@ -1,7 +1,7 @@
 var express=require('express');
 var app=express();
+var fortune=require('./lib/fortunes');
 
-var fortunes=["1","2","3","4"];
 
 //设置视图模板，并指明默认布局 main
 var handlebars=require('express3-handlebars').create({defaultLayout:'main'});
@@ -17,12 +17,11 @@ app.get('/',function(req,res){
     res.render('home');
 });
 app.get('/about',function(req,res){
-    var randomFortune=fortunes[Math.floor(Math.random()*fortunes.length)];
-    res.render('about',{fortune:randomFortune});
+    res.render('about',{fortune:fortune.getFortune()});
 });
 app.use(function(req,res){
     res.status(404);
-    res.render(404);
+    res.render('404');
 });
 app.use(function(err,req,res,next){
     res.status(500);
