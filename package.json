@@ -1,0 +1,27 @@
+{
+  "name": "node-express",
+  "version": "1.0.0",
+  "description": "learn node express",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liwenhong/node-express.git"
+  },
+  "keywords": [
+    "node",
+    "express"
+  ],
+  "author": "liwh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liwenhong/node-express/issues"
+  },
+  "homepage": "https://github.com/liwenhong/node-express#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "express3-handlebars": "^0.5.2"
+  }
+}
